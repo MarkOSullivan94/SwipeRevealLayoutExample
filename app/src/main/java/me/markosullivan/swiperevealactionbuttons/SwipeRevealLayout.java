@@ -23,7 +23,7 @@ import android.view.ViewGroup;
  */
 
 @SuppressLint("RtlHardcoded")
-public class SwipeRevealLayout extends ViewGroup {
+    public class SwipeRevealLayout extends ViewGroup {
 
     private static final String SUPER_INSTANCE_STATE = "saved_instance_state_parcelable";
 
@@ -401,6 +401,13 @@ public class SwipeRevealLayout extends ViewGroup {
      */
     public boolean isDragLocked() {
         return mLockDrag;
+    }
+
+    /**
+     * @return Set true for lock the swipe.
+     */
+    public void dragLock(Boolean drag) {
+        this.mLockDrag  = drag;
     }
 
     private int getMainOpenLeft() {
